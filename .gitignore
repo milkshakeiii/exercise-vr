@@ -4,6 +4,7 @@
 /[Bb]uild/
 /[Bb]uilds/
 /Assets/AssetStoreTools*
+/Assets/Textures/wood_tiled_01_n.tif
 
 # Visual Studio 2015 cache directory
 /.vs/
