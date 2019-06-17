@@ -54,7 +54,7 @@ public class PeopleMover : MonoBehaviour
         //move
         if (!float.IsNaN(current_velocity))
         {
-            Debug.Log(current_velocity * Vector3.Normalize(nextWaypoint.transform.position - character.transform.position));
+            //Debug.Log(current_velocity * Vector3.Normalize(nextWaypoint.transform.position - character.transform.position));
             character.SimpleMove(current_velocity * Vector3.Normalize(nextWaypoint.transform.position - character.transform.position));
         }
     }

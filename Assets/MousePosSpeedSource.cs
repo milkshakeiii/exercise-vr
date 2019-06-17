@@ -43,7 +43,7 @@ public class MousePosSpeedSource : MonoBehaviour
         floats[0] = 0;
         float best_value = Mathf.Max(floats);
         int best_index = floats.IndexOf<float>(best_value);
-        //Debug.Log(best_index);
+        Debug.Log(best_index);
         if (best_index <= 1)
             best_index = 0;
 

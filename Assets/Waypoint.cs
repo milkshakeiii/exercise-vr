@@ -5,6 +5,7 @@ using UnityEngine;
 public class Waypoint : MonoBehaviour
 {
     public Waypoint[] waypointChildren;
+    public GameObject arrowPrefab;
 
     // Start is called before the first frame update
     void Start()
