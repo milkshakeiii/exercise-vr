@@ -5011,6 +5011,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypointChildren:
   - {fileID: 1859607524}
+  arrowPrefab: {fileID: 0}
 --- !u!1001 &170501331
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5282,6 +5283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypointChildren:
   - {fileID: 620037908}
+  arrowPrefab: {fileID: 0}
 --- !u!1 &177684446
 GameObject:
   m_ObjectHideFlags: 0
@@ -18622,6 +18624,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypointChildren:
   - {fileID: 1288655273}
+  arrowPrefab: {fileID: 0}
 --- !u!4 &620037909
 Transform:
   m_ObjectHideFlags: 0
@@ -39958,6 +39961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypointChildren:
   - {fileID: 1432703145}
+  arrowPrefab: {fileID: 0}
 --- !u!4 &1285564700
 Transform:
   m_ObjectHideFlags: 0
@@ -40005,6 +40009,7 @@ MonoBehaviour:
   waypointChildren:
   - {fileID: 170423232}
   - {fileID: 1285564699}
+  arrowPrefab: {fileID: 0}
 --- !u!4 &1288655274
 Transform:
   m_ObjectHideFlags: 0
@@ -43477,6 +43482,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypointChildren:
   - {fileID: 177647689}
+  arrowPrefab: {fileID: 0}
 --- !u!4 &1432703146
 Transform:
   m_ObjectHideFlags: 0
@@ -55759,6 +55765,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypointChildren:
   - {fileID: 177647689}
+  arrowPrefab: {fileID: 0}
 --- !u!1001 &1867755480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59733,8 +59740,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1982191799}
-  m_LocalRotation: {x: 0.115700096, y: 0.4086212, z: 0.052306328, w: -0.9038287}
-  m_LocalPosition: {x: 34.955166, y: -13.946432, z: -72.53781}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.33, y: -0.7559948, z: 30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
