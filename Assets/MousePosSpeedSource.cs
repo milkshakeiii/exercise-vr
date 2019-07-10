@@ -8,6 +8,7 @@ public class MousePosSpeedSource : MonoBehaviour
     public PeopleMover peopleMover;
     public const float patience_constant = 0f;
     public const int buffer_size = 128;
+    public float speed_multiplier = 3f;
 
     private Queue<System.Numerics.Complex> fft_me = new Queue<System.Numerics.Complex>();
     private Queue<float> samples_times = new Queue<float>();
@@ -61,6 +62,6 @@ public class MousePosSpeedSource : MonoBehaviour
         float cycles_per_second = active_index / buffer_length;
 
         //peopleMover.ReportVelocity(5);
-        peopleMover.ReportVelocity(cycles_per_second);
+        peopleMover.ReportVelocity(speed_multiplier * cycles_per_second);
     }
 }
