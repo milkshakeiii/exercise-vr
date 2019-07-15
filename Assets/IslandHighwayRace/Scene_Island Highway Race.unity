@@ -2507,6 +2507,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1848882635}
     m_Modifications:
+    - target: {fileID: 167274, guid: 8b270ea700b929543bce3046ea3138ba, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 467274, guid: 8b270ea700b929543bce3046ea3138ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.13
@@ -3127,7 +3131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efd0c07c648958044af67910d5770135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypointChildren: []
+  waypointChildren:
+  - {fileID: 1165075464}
   arrowPrefab: {fileID: 0}
 --- !u!1001 &135982628
 PrefabInstance:
@@ -6390,8 +6395,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efd0c07c648958044af67910d5770135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypointChildren: []
-  arrowPrefab: {fileID: 0}
+  waypointChildren:
+  - {fileID: 1703214206}
+  arrowPrefab: {fileID: 1703214204}
 --- !u!4 &295593336 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 467274, guid: 8b270ea700b929543bce3046ea3138ba,
@@ -6480,7 +6486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypointChildren: []
-  arrowPrefab: {fileID: 0}
+  arrowPrefab: {fileID: 1758129965}
 --- !u!4 &299481435 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 401196, guid: 9e6893cc361455d4b89208e40354a19e,
@@ -9855,7 +9861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 432722, guid: 3a1e1aa35a3e1b04d9a86e05136cd151, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 432722, guid: 3a1e1aa35a3e1b04d9a86e05136cd151, type: 3}
       propertyPath: m_LocalRotation.z
@@ -9863,7 +9869,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 432722, guid: 3a1e1aa35a3e1b04d9a86e05136cd151, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432722, guid: 3a1e1aa35a3e1b04d9a86e05136cd151, type: 3}
       propertyPath: m_RootOrder
@@ -9872,6 +9878,10 @@ PrefabInstance:
     - target: {fileID: 432722, guid: 3a1e1aa35a3e1b04d9a86e05136cd151, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 432722, guid: 3a1e1aa35a3e1b04d9a86e05136cd151, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a1e1aa35a3e1b04d9a86e05136cd151, type: 3}
@@ -9900,7 +9910,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 462154836}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.337, y: 0, z: -879.416}
+  m_LocalPosition: {x: -1.337, y: 0, z: -880.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1844625193}
@@ -9920,7 +9930,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efd0c07c648958044af67910d5770135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypointChildren: []
+  waypointChildren:
+  - {fileID: 1844625194}
+  - {fileID: 295542406}
   arrowPrefab: {fileID: 0}
 --- !u!4 &463286595 stripped
 Transform:
@@ -11485,7 +11497,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 422250, guid: 4f30d36ebe820064f8ccfe42c241ebe9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 422250, guid: 4f30d36ebe820064f8ccfe42c241ebe9, type: 3}
       propertyPath: m_LocalRotation.z
@@ -11493,11 +11505,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 422250, guid: 4f30d36ebe820064f8ccfe42c241ebe9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 422250, guid: 4f30d36ebe820064f8ccfe42c241ebe9, type: 3}
       propertyPath: m_RootOrder
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 422250, guid: 4f30d36ebe820064f8ccfe42c241ebe9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f30d36ebe820064f8ccfe42c241ebe9, type: 3}
@@ -12716,6 +12732,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
+--- !u!143 &616487390 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 14300000, guid: ce816f2e6abb0504092c23ed9b970dfd,
+    type: 3}
+  m_PrefabInstance: {fileID: 616487389}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &616487391 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd,
@@ -12935,6 +12957,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1848882635}
     m_Modifications:
+    - target: {fileID: 101196, guid: 9e6893cc361455d4b89208e40354a19e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 401196, guid: 9e6893cc361455d4b89208e40354a19e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.7
@@ -14342,6 +14368,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1848882635}
     m_Modifications:
+    - target: {fileID: 101196, guid: 9e6893cc361455d4b89208e40354a19e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 401196, guid: 9e6893cc361455d4b89208e40354a19e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.841
@@ -15087,7 +15117,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 422592, guid: f8d48f23d74996a4a8ce90c26f3bd8a1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 422592, guid: f8d48f23d74996a4a8ce90c26f3bd8a1, type: 3}
       propertyPath: m_LocalRotation.z
@@ -15095,7 +15125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 422592, guid: f8d48f23d74996a4a8ce90c26f3bd8a1, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 422592, guid: f8d48f23d74996a4a8ce90c26f3bd8a1, type: 3}
       propertyPath: m_RootOrder
@@ -15104,6 +15134,10 @@ PrefabInstance:
     - target: {fileID: 422592, guid: f8d48f23d74996a4a8ce90c26f3bd8a1, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 422592, guid: f8d48f23d74996a4a8ce90c26f3bd8a1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8d48f23d74996a4a8ce90c26f3bd8a1, type: 3}
@@ -15185,6 +15219,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1848882635}
     m_Modifications:
+    - target: {fileID: 167274, guid: 8b270ea700b929543bce3046ea3138ba, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 467274, guid: 8b270ea700b929543bce3046ea3138ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.552
@@ -15641,7 +15679,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efd0c07c648958044af67910d5770135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypointChildren: []
+  waypointChildren:
+  - {fileID: 135720473}
   arrowPrefab: {fileID: 0}
 --- !u!4 &754945518 stripped
 Transform:
@@ -18291,7 +18330,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efd0c07c648958044af67910d5770135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypointChildren: []
+  waypointChildren:
+  - {fileID: 462154838}
   arrowPrefab: {fileID: 0}
 --- !u!1001 &870733524
 PrefabInstance:
@@ -20097,6 +20137,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1848882635}
     m_Modifications:
+    - target: {fileID: 167274, guid: 8b270ea700b929543bce3046ea3138ba, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 467274, guid: 8b270ea700b929543bce3046ea3138ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.843
@@ -20909,7 +20953,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efd0c07c648958044af67910d5770135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypointChildren: []
+  waypointChildren:
+  - {fileID: 1427791520}
   arrowPrefab: {fileID: 0}
 --- !u!4 &982544307 stripped
 Transform:
@@ -21629,8 +21674,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 735bbb7aa8cc6c542a4b2944a9dd7a72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypointHead: {fileID: 0}
-  character: {fileID: 0}
+  waypointHead: {fileID: 870133911}
+  character: {fileID: 616487390}
   running_average_size: 5
   arrivalThreshhold: 1
 --- !u!1001 &1005593052
@@ -23548,6 +23593,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1848882635}
     m_Modifications:
+    - target: {fileID: 101196, guid: 9e6893cc361455d4b89208e40354a19e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 401196, guid: 9e6893cc361455d4b89208e40354a19e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -25049,7 +25098,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efd0c07c648958044af67910d5770135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypointChildren: []
+  waypointChildren:
+  - {fileID: 980243048}
   arrowPrefab: {fileID: 0}
 --- !u!1 &1162704330 stripped
 GameObject:
@@ -25145,7 +25195,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efd0c07c648958044af67910d5770135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypointChildren: []
+  waypointChildren:
+  - {fileID: 1161926972}
   arrowPrefab: {fileID: 0}
 --- !u!4 &1167852034 stripped
 Transform:
@@ -28486,7 +28537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypointChildren: []
-  arrowPrefab: {fileID: 0}
+  arrowPrefab: {fileID: 1044348542}
 --- !u!1001 &1329255611
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30576,7 +30627,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efd0c07c648958044af67910d5770135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypointChildren: []
+  waypointChildren:
+  - {fileID: 870133911}
   arrowPrefab: {fileID: 0}
 --- !u!1 &1428798774 stripped
 GameObject:
@@ -31462,6 +31514,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1848882635}
     m_Modifications:
+    - target: {fileID: 101196, guid: 9e6893cc361455d4b89208e40354a19e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 401196, guid: 9e6893cc361455d4b89208e40354a19e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.001
@@ -33384,7 +33440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypointChildren: []
-  arrowPrefab: {fileID: 0}
+  arrowPrefab: {fileID: 1328728057}
 --- !u!1001 &1594722940
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35268,7 +35324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 422210, guid: 7bee6a3dfe8361245891e4a8ac452c2a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 422210, guid: 7bee6a3dfe8361245891e4a8ac452c2a, type: 3}
       propertyPath: m_LocalRotation.z
@@ -35276,7 +35332,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 422210, guid: 7bee6a3dfe8361245891e4a8ac452c2a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 422210, guid: 7bee6a3dfe8361245891e4a8ac452c2a, type: 3}
       propertyPath: m_RootOrder
@@ -35285,6 +35341,10 @@ PrefabInstance:
     - target: {fileID: 422210, guid: 7bee6a3dfe8361245891e4a8ac452c2a, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 422210, guid: 7bee6a3dfe8361245891e4a8ac452c2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bee6a3dfe8361245891e4a8ac452c2a, type: 3}
@@ -35718,8 +35778,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efd0c07c648958044af67910d5770135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypointChildren: []
-  arrowPrefab: {fileID: 0}
+  waypointChildren:
+  - {fileID: 298722486}
+  arrowPrefab: {fileID: 298722484}
 --- !u!4 &1703679237 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 467274, guid: 8b270ea700b929543bce3046ea3138ba,
@@ -36545,7 +36606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypointChildren: []
-  arrowPrefab: {fileID: 0}
+  arrowPrefab: {fileID: 1593135142}
 --- !u!1001 &1742282427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36975,7 +37036,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypointChildren: []
-  arrowPrefab: {fileID: 0}
+  arrowPrefab: {fileID: 1740655866}
 --- !u!4 &1764866596 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 467274, guid: 8b270ea700b929543bce3046ea3138ba,
@@ -37803,7 +37864,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efd0c07c648958044af67910d5770135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypointChildren: []
+  waypointChildren:
+  - {fileID: 753487556}
   arrowPrefab: {fileID: 0}
 --- !u!1001 &1806325998
 PrefabInstance:
@@ -38576,7 +38638,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844625192}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.501, y: 0, z: -28.62}
+  m_LocalPosition: {x: 25.501, y: 0, z: -27.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1806031641}
@@ -38595,7 +38657,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efd0c07c648958044af67910d5770135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypointChildren: []
+  waypointChildren:
+  - {fileID: 1806031642}
   arrowPrefab: {fileID: 0}
 --- !u!1001 &1844957955
 PrefabInstance:
@@ -42178,6 +42241,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1848882635}
     m_Modifications:
+    - target: {fileID: 101196, guid: 9e6893cc361455d4b89208e40354a19e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 401196, guid: 9e6893cc361455d4b89208e40354a19e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.8
@@ -43352,12 +43419,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2081497367}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5998521ced8672b4984d55e5d0d885c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  peopleMover: {fileID: 0}
+  peopleMover: {fileID: 1003081947}
   speed_multiplier: 3
 --- !u!114 &2081497370
 MonoBehaviour:
@@ -43379,13 +43446,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2081497367}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8668394de8090f48b49e2afebb703c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  peopleMover: {fileID: 0}
-  head: {fileID: 0}
+  peopleMover: {fileID: 1003081947}
+  head: {fileID: 870133909}
   speed_multiplier: 3
 --- !u!1001 &2081726101
 PrefabInstance:
@@ -43945,6 +44012,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1848882635}
     m_Modifications:
+    - target: {fileID: 101196, guid: 9e6893cc361455d4b89208e40354a19e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 401196, guid: 9e6893cc361455d4b89208e40354a19e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.71400005
@@ -44620,6 +44691,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1848882635}
     m_Modifications:
+    - target: {fileID: 167274, guid: 8b270ea700b929543bce3046ea3138ba, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 467274, guid: 8b270ea700b929543bce3046ea3138ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.55
