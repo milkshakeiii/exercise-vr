@@ -49,6 +49,7 @@ public class PeopleMover : MonoBehaviour
         {
             currentWaypoint = nextWaypoint;
             nextWaypoint = currentWaypoint.waypointChildren[Random.Range(0, currentWaypoint.waypointChildren.Length)];
+            character.transform.LookAt(nextWaypoint.transform);
         }
 
         //move
