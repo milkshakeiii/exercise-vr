@@ -63,7 +63,7 @@ public class HeadsetSpeedSource : MonoBehaviour
         float cycles_per_second = active_index / buffer_length;
 
         //peopleMover.ReportVelocity(5);
-        peopleMover.ReportVelocity(speed_multiplier * cycles_per_second);
+        peopleMover.ReportVelocity(speed_multiplier * cycles_per_second * cycles_per_second);
     }
 
     private float GetHeadsetY()
