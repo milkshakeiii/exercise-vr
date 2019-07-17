@@ -50137,6 +50137,7 @@ GameObject:
   - component: {fileID: 2081497370}
   - component: {fileID: 2081497369}
   - component: {fileID: 2081497371}
+  - component: {fileID: 2081497372}
   m_Layer: 0
   m_Name: SpeedSources
   m_TagString: Untagged
@@ -50192,9 +50193,24 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2081497367}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8668394de8090f48b49e2afebb703c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  peopleMover: {fileID: 1003081947}
+  head: {fileID: 1790882180}
+  speed_multiplier: 3
+--- !u!114 &2081497372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081497367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53909f3f975c31b49a9120422dba0b04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   peopleMover: {fileID: 1003081947}
