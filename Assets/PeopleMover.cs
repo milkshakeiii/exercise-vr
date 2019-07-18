@@ -8,6 +8,8 @@ public class PeopleMover : MonoBehaviour
 
     public CharacterController character;
 
+    public UnityEngine.UI.Text speedometer;
+
     public int running_average_size = 5;
     public float arrivalThreshhold = 1f;
 
@@ -56,7 +58,9 @@ public class PeopleMover : MonoBehaviour
         if (!float.IsNaN(current_velocity))
         {
             //Debug.Log(current_velocity * Vector3.Normalize(nextWaypoint.transform.position - character.transform.position));
-            character.SimpleMove(current_velocity * Vector3.Normalize(nextWaypoint.transform.position - character.transform.position));
+            Vector3 move_amount = current_velocity * Vector3.Normalize(nextWaypoint.transform.position - character.transform.position);
+            character.SimpleMove(move_amount);
+            speedometer.text = (current_velocity * 2.23694).ToString("F1") + " mph";
         }
     }
 }
