@@ -6,8 +6,7 @@ public class SpikeySpeedSource : MonoBehaviour
 {
     public PeopleMover peopleMover;
     public GameObject head;
-    public const float patience_constant = 0f;
-    public const int buffer_size = 128;
+    public float buffer_size = 1f;
     public float speed_multiplier = 3f;
 
     private Queue<float> local_minmax_me = new Queue<float>();
@@ -19,12 +18,12 @@ public class SpikeySpeedSource : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < buffer_size; i++)
-        {
-            local_minmax_me.Enqueue(Input.mousePosition.y);
+        //for (int i = 0; i < buffer_size; i++)
+        //{
+            //local_minmax_me.Enqueue(Input.mousePosition.y);
             //local_minmax_me.Enqueue(GetHeadsetY());
-            samples_times.Enqueue(Time.time);
-        }
+            //samples_times.Enqueue(Time.time);
+        //}
     }
 
     // Update is called once per frame
@@ -32,9 +31,19 @@ public class SpikeySpeedSource : MonoBehaviour
     {
         local_minmax_me.Enqueue(Input.mousePosition.y);
         //local_minmax_me.Enqueue(GetHeadsetY());
-        local_minmax_me.Dequeue();
         samples_times.Enqueue(Time.time);
-        float popped_time = samples_times.Dequeue();
+
+        float oldest_time = samples_times.Peek();
+        float buffer_length = Time.time - oldest_time;
+        //Debug.Log(local_minmax_me.Count);
+        //Debug.Log(buffer_length);
+
+        if (buffer_length > buffer_size)
+        {
+            local_minmax_me.Dequeue();
+            samples_times.Dequeue();
+        }
+        
 
         List<float> minmaxes = new List<float>();
         int local_minmaxes = 0;
@@ -44,15 +53,15 @@ public class SpikeySpeedSource : MonoBehaviour
         {
             if ((twoprev < prev && prev > sample) || (twoprev > prev && prev < sample))
             {
+                Debug.Log("beep");
                 local_minmaxes++;
                 minmaxes.Add(sample);
             }
             twoprev = prev;
             prev = sample;
         }
-        Debug.Log(local_minmaxes);
+        //Debug.Log(local_minmaxes);
 
-        float buffer_length = Time.time - popped_time;
         float minmax_per_second = local_minmaxes / buffer_length;
 
         //peopleMover.ReportVelocity(5);
