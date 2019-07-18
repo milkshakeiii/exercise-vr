@@ -50538,13 +50538,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2081497367}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53909f3f975c31b49a9120422dba0b04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   peopleMover: {fileID: 1003081947}
   head: {fileID: 1790882180}
+  buffer_size: 1
   speed_multiplier: 3
 --- !u!4 &2082333820 stripped
 Transform:
