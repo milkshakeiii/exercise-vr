@@ -47,20 +47,34 @@ public class SpikeySpeedSource : MonoBehaviour
 
         List<float> minmaxes = new List<float>();
         int local_minmaxes = 0;
-        float twoprev = 0f;
-        float prev = 0f;
+        float twoprev = local_minmax_me.Peek();
+        float prev = local_minmax_me.Peek();
+        //Debug.Log(local_minmax_me.Peek());
+        int ignore = 2;
         foreach (float sample in local_minmax_me)
         {
+            if (ignore > 0)
+            {
+                ignore--;
+                continue;
+            }
+            if (sample == prev)
+            {
+                continue;
+            }
+
             if ((twoprev < prev && prev > sample) || (twoprev > prev && prev < sample))
             {
-                Debug.Log("beep");
+                //Debug.Log(twoprev);
+                //Debug.Log(prev);
+                //Debug.Log(sample);
                 local_minmaxes++;
                 minmaxes.Add(sample);
             }
             twoprev = prev;
             prev = sample;
         }
-        //Debug.Log(local_minmaxes);
+
 
         float minmax_per_second = local_minmaxes / buffer_length;
 
