@@ -76,6 +76,8 @@ public class SpikeySpeedSource : MonoBehaviour
         }
 
 
+        if (local_minmaxes <= 2)
+            local_minmaxes = 0;
         float minmax_per_second = local_minmaxes / buffer_length;
 
         //peopleMover.ReportVelocity(5);
