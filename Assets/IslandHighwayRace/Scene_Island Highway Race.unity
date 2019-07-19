@@ -50543,6 +50543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53909f3f975c31b49a9120422dba0b04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseTest: 0
   peopleMover: {fileID: 1003081947}
   head: {fileID: 1790882180}
   buffer_size: 1

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpikeySpeedSource : MonoBehaviour
 {
+    public bool mouseTest = false;
     public PeopleMover peopleMover;
     public GameObject head;
     public float buffer_size = 1f;
@@ -29,8 +30,10 @@ public class SpikeySpeedSource : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        local_minmax_me.Enqueue(Input.mousePosition.y);
-        //local_minmax_me.Enqueue(GetHeadsetY());
+        if (mouseTest)
+            local_minmax_me.Enqueue(Input.mousePosition.y);
+        else
+            local_minmax_me.Enqueue(GetHeadsetY());
         samples_times.Enqueue(Time.time);
 
         float oldest_time = samples_times.Peek();
@@ -78,15 +81,14 @@ public class SpikeySpeedSource : MonoBehaviour
 
         if (local_minmaxes <= 2)
             local_minmaxes = 0;
-        float minmax_per_second = local_minmaxes / buffer_length;
+        float minmax_per_second = local_minmaxes / buffer_size;
 
         //peopleMover.ReportVelocity(5);
-        peopleMover.ReportVelocity(speed_multiplier * minmax_per_second * minmax_per_second);
+        peopleMover.ReportVelocity(speed_multiplier * minmax_per_second);
     }
 
     private float GetHeadsetY()
     {
-        Debug.Log(head.transform.position.y);
         return head.transform.position.y;
     }
 }
