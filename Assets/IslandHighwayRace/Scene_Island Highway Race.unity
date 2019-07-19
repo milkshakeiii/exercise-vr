@@ -50548,6 +50548,7 @@ MonoBehaviour:
   head: {fileID: 1790882180}
   buffer_size: 1
   speed_multiplier: 3
+  height_requirement: 0.02
 --- !u!4 &2082333820 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 467274, guid: 8b270ea700b929543bce3046ea3138ba,

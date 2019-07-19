@@ -9,6 +9,7 @@ public class SpikeySpeedSource : MonoBehaviour
     public GameObject head;
     public float buffer_size = 1f;
     public float speed_multiplier = 3f;
+    public float height_requirement = 0.1f;
 
     private Queue<float> local_minmax_me = new Queue<float>();
     private Queue<float> samples_times = new Queue<float>();
@@ -78,9 +79,15 @@ public class SpikeySpeedSource : MonoBehaviour
             prev = sample;
         }
 
+        for (int i = 1; i < minmaxes.Count; i++)
+        {
+            if (Mathf.Abs(minmaxes[i] - minmaxes[i - 1]) < height_requirement)
+                local_minmaxes--;
+        }
 
         if (local_minmaxes <= 2)
             local_minmaxes = 0;
+
         float minmax_per_second = local_minmaxes / buffer_size;
 
         //peopleMover.ReportVelocity(5);
