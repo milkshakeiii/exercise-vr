@@ -13,9 +13,11 @@ public class PeopleMover : MonoBehaviour
     public int running_average_size = 5;
     public float arrivalThreshhold = 1f;
 
+    public float text_update_freq = 0.5f;
     private float[] reported_velocities;
     private int rotating_index = 0;
 
+    private float last_update = 0f;
     private Waypoint currentWaypoint;
     private Waypoint nextWaypoint;
 
@@ -60,7 +62,11 @@ public class PeopleMover : MonoBehaviour
             //Debug.Log(current_velocity * Vector3.Normalize(nextWaypoint.transform.position - character.transform.position));
             Vector3 move_amount = current_velocity * Vector3.Normalize(nextWaypoint.transform.position - character.transform.position);
             character.SimpleMove(move_amount);
-            speedometer.text = (current_velocity * 2.23694).ToString("F1") + " mph";
+            if (Time.time - last_update > text_update_freq)
+            {
+                last_update = Time.time;
+                speedometer.text = (current_velocity * 2.23694).ToString("F1") + " mph";
+            }
         }
     }
 }

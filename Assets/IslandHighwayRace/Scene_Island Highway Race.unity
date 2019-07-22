@@ -24637,6 +24637,7 @@ MonoBehaviour:
   speedometer: {fileID: 468902544}
   running_average_size: 5
   arrivalThreshhold: 1
+  text_update_freq: 0.1
 --- !u!1001 &1005593052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50562,12 +50563,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ea2c8c21e7388b4f9668c95ba231590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseTest: 1
+  mouseTest: 0
   peopleMover: {fileID: 1003081947}
   head: {fileID: 1790882180}
-  buffer_size: 0.2
-  speed_multiplier: 0.03
-  threshhold: 1
+  buffer_size: 0.5
+  speed_multiplier: 4.5
+  threshhold: 0.3
 --- !u!4 &2082333820 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 467274, guid: 8b270ea700b929543bce3046ea3138ba,

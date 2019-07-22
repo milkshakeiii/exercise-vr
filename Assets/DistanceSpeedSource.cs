@@ -67,7 +67,7 @@ public class DistanceSpeedSource : MonoBehaviour
         if (distance_per_second < threshhold)
             distance_per_second = 0f;
 
-        peopleMover.ReportVelocity(speed_multiplier * distance_per_second);
+        peopleMover.ReportVelocity(speed_multiplier * Mathf.Pow(distance_per_second, 1.5f));
     }
 
     private float GetHeadsetY()
