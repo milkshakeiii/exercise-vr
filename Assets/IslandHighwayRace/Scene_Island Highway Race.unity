@@ -50468,6 +50468,7 @@ GameObject:
   - component: {fileID: 2081497369}
   - component: {fileID: 2081497371}
   - component: {fileID: 2081497372}
+  - component: {fileID: 2081497373}
   m_Layer: 0
   m_Name: SpeedSources
   m_TagString: Untagged
@@ -50538,17 +50539,35 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2081497367}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53909f3f975c31b49a9120422dba0b04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseTest: 0
+  mouseTest: 1
   peopleMover: {fileID: 1003081947}
   head: {fileID: 1790882180}
-  buffer_size: 1
-  speed_multiplier: 3
+  buffer_size: 2
+  speed_multiplier: 0.3
   height_requirement: 0.02
+--- !u!114 &2081497373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081497367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ea2c8c21e7388b4f9668c95ba231590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseTest: 1
+  peopleMover: {fileID: 1003081947}
+  head: {fileID: 1790882180}
+  buffer_size: 0.2
+  speed_multiplier: 0.03
+  threshhold: 1
 --- !u!4 &2082333820 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 467274, guid: 8b270ea700b929543bce3046ea3138ba,
