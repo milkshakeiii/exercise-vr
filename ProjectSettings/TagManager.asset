@@ -19,8 +19,8 @@ TagManager:
   - ReflectedInWater
   - Ground
   - AccessibleVolume
-  - 
-  - 
+  - Player
+  - Eye
   - 
   - 
   - 
