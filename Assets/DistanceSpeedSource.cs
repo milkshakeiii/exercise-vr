@@ -10,6 +10,7 @@ public class DistanceSpeedSource : MonoBehaviour
     public float buffer_size = 1f;
     public float speed_multiplier = 3f;
     public float threshhold = 1f;
+    public float curve = 1.5f;
 
     private Queue<float> running_sum = new Queue<float>();
     private Queue<float> samples_times = new Queue<float>();
@@ -67,7 +68,7 @@ public class DistanceSpeedSource : MonoBehaviour
         if (distance_per_second < threshhold)
             distance_per_second = 0f;
 
-        peopleMover.ReportVelocity(speed_multiplier * Mathf.Pow(distance_per_second, 1.5f));
+        peopleMover.ReportVelocity(speed_multiplier * Mathf.Pow(distance_per_second, curve));
     }
 
     private float GetHeadsetY()
