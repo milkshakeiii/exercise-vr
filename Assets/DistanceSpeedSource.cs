@@ -45,7 +45,7 @@ public class DistanceSpeedSource : MonoBehaviour
 
 
         //input
-        if (OVRInput.GetDown(OVRInput.RawButton.A) || Input.GetKeyDown(KeyCode.A))
+        if (OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger) || Input.GetKeyDown(KeyCode.A))
         {
             speed_multiplier += 0.1f;
         }
