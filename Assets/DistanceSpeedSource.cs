@@ -11,6 +11,8 @@ public class DistanceSpeedSource : MonoBehaviour
     public float speed_multiplier = 3f;
     public float threshhold = 1f;
     public float curve = 1.5f;
+    public UnityEngine.UI.Text multiplier_text;
+    public UnityEngine.UI.Text exponent_text;
 
     private Queue<float> running_sum = new Queue<float>();
     private Queue<float> samples_times = new Queue<float>();
@@ -34,6 +36,34 @@ public class DistanceSpeedSource : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //update display info
+        if (Time.frameCount%100 == 1)
+        {
+            multiplier_text.text = "multiplier: " + speed_multiplier.ToString("F1");
+            exponent_text.text = "exponent: " + curve.ToString("F1");
+        }
+
+
+        //input
+        if (OVRInput.GetDown(OVRInput.RawButton.A) || Input.GetKeyDown(KeyCode.A))
+        {
+            speed_multiplier += 0.1f;
+        }
+        if (OVRInput.GetDown(OVRInput.RawButton.LHandTrigger) || Input.GetKeyDown(KeyCode.S))
+        {
+            speed_multiplier -= 0.1f;
+        }
+        if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger) || Input.GetKeyDown(KeyCode.D))
+        {
+            curve += 0.1f;
+        }
+        if (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger) || Input.GetKeyDown(KeyCode.F))
+        {
+            curve -= 0.1f;
+        }
+
+
+        //find speed
         float sample;
         if (mouseTest)
             sample = Input.mousePosition.y;
