@@ -72892,8 +72892,8 @@ MonoBehaviour:
   peopleMover: {fileID: 1003081947}
   head: {fileID: 1483159385}
   buffer_size: 1
-  speed_multiplier: 8
-  threshhold: 0.3
+  speed_multiplier: 26
+  threshhold: 0.15
   curve: 2
   multiplier_text: {fileID: 1925660641}
   exponent_text: {fileID: 58460231}
