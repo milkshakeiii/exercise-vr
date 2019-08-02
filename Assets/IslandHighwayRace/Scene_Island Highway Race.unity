@@ -17912,7 +17912,7 @@ GameObject:
   - component: {fileID: 468902545}
   - component: {fileID: 468902544}
   m_Layer: 14
-  m_Name: Text
+  m_Name: Text (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20041,7 +20041,7 @@ GameObject:
   m_Component:
   - component: {fileID: 554666666}
   m_Layer: 0
-  m_Name: Scenery 2nd
+  m_Name: Scenery 2 - center road and extra water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22552,7 +22552,7 @@ GameObject:
   m_Component:
   - component: {fileID: 642524581}
   m_Layer: 0
-  m_Name: Scenery (1)
+  m_Name: Scenery 3 - east road
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22592,7 +22592,7 @@ Transform:
   - {fileID: 1537705430}
   - {fileID: 541424134}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &646194609
 PrefabInstance:
@@ -35905,7 +35905,7 @@ Transform:
   - {fileID: 735009311}
   - {fileID: 1003081946}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1017492040
 PrefabInstance:
@@ -69522,7 +69522,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1962340533}
   m_Layer: 0
-  m_Name: Scenery
+  m_Name: Scenery 1 - west road
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
