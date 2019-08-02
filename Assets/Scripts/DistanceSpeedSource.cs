@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class DistanceSpeedSource : MonoBehaviour
 {
-    public bool mouseTest = false;
+    public bool mouseTest = false; 
+                                       //check this in the Unity editor to use mouse Y
+                                       //position instead of headset data
     public PeopleMover peopleMover;
+                                       //all speed sources must report speed to
+                                       //PeopleMover script
     public GameObject head;
+                                       //data is gathered from the Y position of
+                                       //this object, which should correspond to
+                                       //oculus player's head/headset
     public float buffer_size = 1f;
+                                       //how many seconds of data should be used
+                                       //in the running distance sum
     public float speed_multiplier = 3f;
-    public float threshhold = 1f;
+                                       //the equation is m*(d^x), this is m, distance
+                                       //is d
     public float curve = 1.5f;
+                                       //and this is x
+    public float threshhold = 1f;
+                                       //if distance falls below this threshhold,
+                                       //set it to 0
     public UnityEngine.UI.Text multiplier_text;
+                                       //this will be updated to the multiplier
+                                       //for testing/debugging
     public UnityEngine.UI.Text exponent_text;
+                                       //same for the exponent
+
 
     private Queue<float> running_sum = new Queue<float>();
     private Queue<float> samples_times = new Queue<float>();
@@ -22,21 +40,10 @@ public class DistanceSpeedSource : MonoBehaviour
     private float last_sum = 0f;
     private float last_sample = 0f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //for (int i = 0; i < buffer_size; i++)
-        //{
-            //local_minmax_me.Enqueue(Input.mousePosition.y);
-            //local_minmax_me.Enqueue(GetHeadsetY());
-            //samples_times.Enqueue(Time.time);
-        //}
-    }
-
     // Update is called once per frame
     void Update()
     {
-        //update display info
+        //update display info for debug/testing
         if (Time.frameCount%100 == 1)
         {
             multiplier_text.text = "multiplier: " + speed_multiplier.ToString("F1");
@@ -44,7 +51,7 @@ public class DistanceSpeedSource : MonoBehaviour
         }
 
 
-        //input
+        //collect input for modifying multiplier and exponent
         if (OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger) || Input.GetKeyDown(KeyCode.A))
         {
             speed_multiplier += 0.1f;
@@ -63,7 +70,7 @@ public class DistanceSpeedSource : MonoBehaviour
         }
 
 
-        //find speed
+        //update running sum with headset data, and find speed using running sum
         float sample;
         if (mouseTest)
             sample = Input.mousePosition.y;
@@ -98,6 +105,7 @@ public class DistanceSpeedSource : MonoBehaviour
         if (distance_per_second < threshhold)
             distance_per_second = 0f;
 
+        //report to PeopleMover
         peopleMover.ReportVelocity(speed_multiplier * Mathf.Pow(distance_per_second, curve));
     }
 
