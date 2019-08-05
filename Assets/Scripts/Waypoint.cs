@@ -4,18 +4,7 @@ using UnityEngine;
 
 public class Waypoint : MonoBehaviour
 {
-    public Waypoint[] waypointChildren;
-    public GameObject arrowPrefab;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Waypoint[] waypointChildren; //waypoints just need to keep track of their
+    //children, which are the possible waypoints the player can go to next
+    //afer reaching this one
 }

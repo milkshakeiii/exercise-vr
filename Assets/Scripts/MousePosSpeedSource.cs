@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Accord.Math;
 
+//please refer to headsetspeedsource for information for this class
+//in the future we may want to merge these two class (some lazy code duplication
+//happened here).  alternatively, we may just delete this class.
 public class MousePosSpeedSource : MonoBehaviour
 {
     public PeopleMover peopleMover;
